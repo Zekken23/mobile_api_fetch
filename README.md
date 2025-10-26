@@ -1,11 +1,8 @@
-# Laundry Logistics (Tugas Modul 3 Pemrograman Mobile)
+# Raja Laundry (Tugas Modul 3 Pemrograman Mobile)
 
 Ini adalah proyek aplikasi Flutter yang dikembangkan untuk memenuhi tugas Modul 3 - Pemrograman Mobile. Proyek ini awalnya berfokus pada perbandingan *API Call* & *Async Handling* (`http` vs `dio` dan `async-await` vs `callback-chaining`).
 
-Seiring pengembangan, proyek ini diubah menjadi aplikasi mini "Laundry Logistics" yang fungsional, menggunakan tema gradient modern, navigasi `go_router`, dan state management `GetX`.
-
-![Tangkapan Layar Dashboard](SCREENSHOT_DASHBOARD.png)
-*(Disarankan: Ganti `SCREENSHOT_DASHBOARD.png` dengan tangkapan layar aplikasi Anda)*
+Seiring pengembangan, proyek ini diubah menjadi aplikasi mini "Raja Laundry" yang fungsional, menggunakan tema gradient modern, navigasi `go_router`, dan state management `GetX`.
 
 ---
 
@@ -49,3 +46,4 @@ Halaman asli untuk tugas Modul 3 tetap dipertahankan dan dapat diakses dari dash
 ## penyusun
 * **Nama:** [Muhammad Yusron AL Ghoni Rizqullah, Angga Surya Triputra]
 * **NIM:** [202310370311333, 202310370311333]
+
