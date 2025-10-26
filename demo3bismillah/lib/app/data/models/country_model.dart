@@ -3,7 +3,7 @@ class Country {
   final String name;
   final String capital;
   final int population;
-  final String? border; // Hanya untuk chained request
+  final String? border; 
 
   Country({
     required this.name,

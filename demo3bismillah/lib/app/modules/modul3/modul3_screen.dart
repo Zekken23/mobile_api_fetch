@@ -1,24 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo3bismillah/app/modules/home/home_controller.dart';
+import 'package:go_router/go_router.dart';
+import 'package:demo3bismillah/app/modules/modul3/modul3_controller.dart';
 import 'package:demo3bismillah/app/modules/widgets/experiment_card.dart'; // Widget ini tetap dipakai
 
-class HomeScreen extends GetView<HomeController> {
-  const HomeScreen({super.key});
+class HomeScreen extends GetView<Modul3Controller> {
+  HomeScreen({super.key});
 
+  final coolGradient = LinearGradient(
+    colors: [Colors.blue.shade600, Colors.teal.shade400],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Modul 3 - Laundry Logistics'), // Judul diubah
-        backgroundColor: Colors.white,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(gradient: coolGradient),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white), // Ubah warna ikon
+          onPressed: () => context.pop(),
+        ),
+        title: const Text('Modul 3 - Laundry Logistics'), 
         elevation: 1,
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // --- EKSPERIMEN 1 & 2 ---
             ExperimentCard(
               title: "Eksperimen 1: Proses Pemesanan", // Judul diubah
               description:

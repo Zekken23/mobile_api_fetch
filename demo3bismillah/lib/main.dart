@@ -11,13 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Modul 3 - API & Async', 
+      debugShowCheckedModeBanner: false,
+      title: 'Laundry Logistics',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.blue.shade600, // Ganti primarySwatch
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade600), // Ini akan mewarnai radio button
         useMaterial3: true,
         scaffoldBackgroundColor: const Color(0xFFF0F2F5),
-        // PERBAIKAN DI SINI:
-        cardTheme: CardThemeData( 
+        cardTheme: CardThemeData(
           elevation: 1,
           margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           shape: RoundedRectangleBorder(

@@ -4,15 +4,16 @@ import 'package:demo3bismillah/app/data/models/order_model.dart';
 import 'package:demo3bismillah/app/data/profiders/mock_customer_service.dart'; 
 import 'package:demo3bismillah/app/data/services/api_service_interface.dart';
 
-class HomeController extends GetxController {
+class Modul3Controller extends GetxController {
   final ApiServiceInterface httpService;
   final ApiServiceInterface dioService;
-  final MockCustomerService customerService; // DI TAMBAHKAN
+  final MockCustomerService customerService; 
 
-  HomeController({
+  // GANTI NAMA CONSTRUCTOR
+  Modul3Controller({
     required this.httpService,
     required this.dioService,
-    required this.customerService, // DI TAMBAHKAN
+    required this.customerService, 
   });
 
   // State untuk hasil eksperimen (tetap RxString untuk ditampilkan di UI)
