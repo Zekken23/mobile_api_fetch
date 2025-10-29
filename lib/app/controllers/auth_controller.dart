@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:assigment2/app/config/app_routes.dart';
 
 class AuthController extends GetxController {
-  // Controllers untuk text fields
   final emailC = TextEditingController();
   final passwordC = TextEditingController();
   final fullNameC = TextEditingController();
@@ -16,13 +15,8 @@ class AuthController extends GetxController {
     isPasswordHidden.value = !isPasswordHidden.value;
   }
 
-  // Fungsi-fungsi ini bisa diisi logic API
   void login(BuildContext context) {
-    // 1. Validasi input
-    // 2. Panggil API Login
-    // 3. Jika sukses:
     print("Login with ${emailC.text} and ${passwordC.text}");
-    // Pindah ke home menggunakan Go_Router
     context.go(AppRoutes.home);
   }
 

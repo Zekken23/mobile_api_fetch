@@ -3,7 +3,6 @@ import 'package:geocoding/geocoding.dart';
 
 class LocationService {
   
-  // Meminta izin dan mendapatkan lokasi saat ini
   Future<Position> _determinePosition() async {
     bool serviceEnabled;
     LocationPermission permission;
@@ -29,12 +28,10 @@ class LocationService {
     return await Geolocator.getCurrentPosition();
   }
 
-  // Mengubah Lat/Lng menjadi nama kota (Geocoding)
   Future<String> getCityName() async {
   try {
     Position position = await _determinePosition();
     
-    // Tambahkan print untuk debugging
     print("[DEBUG] Position: ${position.latitude}, ${position.longitude}");
 
     List<Placemark> placemarks = await placemarkFromCoordinates(
@@ -45,10 +42,8 @@ class LocationService {
     if (placemarks.isNotEmpty) {
       Placemark place = placemarks[0];
       
-      // Tambahkan print untuk debugging
       print("[DEBUG] Placemark found: ${place.toJson()}");
 
-      // 1. Coba dapatkan nama kota (locality)
       String? city = place.locality;
       if (city != null && city.isNotEmpty) {
         return city;

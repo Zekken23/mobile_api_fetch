@@ -7,10 +7,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Ambil controller yang sudah di-inject oleh Binding
     final LocationController locC = Get.find<LocationController>();
 
-    // Data bioskop (dummy)
     final List<String> cinemas = [
       "XI CINEMA",
       "PONDOK KELAPA 21",
@@ -23,12 +21,11 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF2C2C54), // Warna navy gelap
+        backgroundColor: const Color(0xFF2C2C54), 
         foregroundColor: Colors.white,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
-            // Logika untuk kembali
           },
         ),
         title: const Text("THEATER"),
@@ -36,7 +33,6 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Header Lokasi
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
@@ -54,7 +50,6 @@ class HomeScreen extends StatelessWidget {
               children: [
                 const Icon(Icons.location_on, color: Color(0xFF2C2C54)),
                 const SizedBox(width: 8),
-                // Obx akan otomatis update UI saat locC.currentCity berubah
                 Obx(() => locC.isLoading.value
                     ? const SizedBox(
                         height: 16,
@@ -72,7 +67,6 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          // Daftar Bioskop
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(16),
@@ -85,6 +79,8 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: ExpansionTile(
+                  backgroundColor: Colors.white, 
+                  collapsedBackgroundColor: Colors.white,
                     title: Text(
                       cinemas[index],
                       style: const TextStyle(
@@ -93,7 +89,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     children: [
-                      // Isi dropdown (misal: jadwal film)
                       ListTile(
                         title: Text("Jadwal Film 1", style: TextStyle(color: Colors.grey[700])),
                         onTap: () {},
