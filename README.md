@@ -1,16 +1,34 @@
 # assigment2
+## Tugas 2: Aplikasi Mobile API Fetch
 
-A new Flutter project.
+Repositori ini berisi pengerjaan Tugas 2, yang berfokus pada pengambilan data dari API pada aplikasi mobile Yang diberikan LMS Mobile G.
 
-## Getting Started
+## Deskripsi
 
-This project is a starting point for a Flutter application.
+Proyek ini adalah aplikasi mobile sederhana yang mendemonstrasikan fungsionalitas untuk mengambil data dari API eksternal. Aplikasi ini kemudian mem-parsing data (JSON) yang diterima dan menampilkannya kepada pengguna dalam bentuk daftar (list view).
 
-A few resources to get you started if this is your first Flutter project:
+## Fitur Utama
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* **Network Request**: Melakukan panggilan HTTP (GET) ke sebuah endpoint API.
+* **Data Parsing**: Mengubah respons JSON dari API menjadi model data (Data Model) agar mudah dikelola.
+* **UI Display**: Menampilkan data yang telah di-parsing dalam sebuah `ListView` di antarmuka pengguna.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Cara Menjalankan
+
+1.  **Clone repositori:**
+    ```bash
+    git clone [https://github.com/Zekken23/mobile_api_fetch.git](https://github.com/Zekken23/mobile_api_fetch.git)
+    cd mobile_api_fetch
+    git checkout Task
+    ```
+2.  **Install dependencies** (jika menggunakan Flutter):
+    ```bash
+    flutter pub get
+    ```
+3.  **Jalankan aplikasi:**
+    ```bash
+    flutter run
+    ```
+
+## projek manager
+  Nama : Muhammad Yusron Al Ghoni Rizqzullah
