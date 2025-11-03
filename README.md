@@ -30,5 +30,8 @@ Proyek ini adalah aplikasi mobile sederhana yang mendemonstrasikan fungsionalita
     flutter run
     ```
 
+## try and error
+Mungkin ada beberapa di bagian pemanggilan asset yang fotonya ndak ke crop jadi secepatnya bakal ku update ASAP
+
 ## projek manager
   Nama : Muhammad Yusron Al Ghoni Rizqzullah
